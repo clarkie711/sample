@@ -55,14 +55,17 @@ main {
 }
 
 /* Dog */
+/* Dog */
 .dog {
   position: absolute;
   bottom: 100px;
   left: -100px; /* Start off-screen */
   width: 100px;
   height: 50px;
-  animation: moveDog 5s linear infinite;
+  animation: moveDog 8s ease-in-out infinite; /* Smooth animation */
 }
+
+
 
 .body {
   width: 60px;
@@ -104,15 +107,19 @@ main {
   border-radius: 5px;
 }
 
-/* Animation */
+/* Keyframes for Smooth Movement */
 @keyframes moveDog {
   0% {
-    transform: translateX(-100px); /* Start off-screen left */
+    transform: translateX(-150px); /* Start slightly off-screen left */
+  }
+  50% {
+    transform: translateX(50vw); /* Midway across the screen */
   }
   100% {
-    transform: translateX(110vw); /* Move across the screen */
+    transform: translateX(110vw); /* End off-screen right */
   }
 }
+
 
 /* Footer */
 footer {
